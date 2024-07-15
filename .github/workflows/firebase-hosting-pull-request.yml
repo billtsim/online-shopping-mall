@@ -30,3 +30,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JAVAPROJECT_423312 }}'
           projectId: javaproject-423312
+          channelId: 'pr-preview'
