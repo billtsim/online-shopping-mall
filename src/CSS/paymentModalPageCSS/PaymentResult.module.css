@@ -1,0 +1,68 @@
+.paymentResultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Ensure footer stays at the bottom */
+  background-color: black;
+  min-height: 100vh; /* Ensure the container covers the entire viewport height */
+  padding-top: 50px; /* Space from the top */
+}
+
+.navigationBar {
+  width: 100%;
+}
+
+.paymentResultContent {
+  background-color: rgb(10, 22, 37);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.paymentMessage {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: white; /* Ensure text is visible on dark background */
+}
+
+.paymentStatus {
+  font-size: 1.2rem;
+  color: #17a2b8;
+  margin-top: 10px;
+}
+
+/* Medium screen sizes (tablets, 768px) */
+@media (max-width: 768px) {
+  .paymentResultContent {
+    padding: 30px;
+    max-width: 90%;
+  }
+
+  .paymentMessage {
+    font-size: 1.3rem;
+  }
+
+  .paymentStatus {
+    font-size: 1rem;
+  }
+}
+
+/* Small screen sizes (mobile, 480px) */
+@media (max-width: 480px) {
+  .paymentResultContent {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .paymentMessage {
+    font-size: 1.2rem;
+  }
+
+  .paymentStatus {
+    font-size: 0.9rem;
+  }
+}

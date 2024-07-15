@@ -1,0 +1,162 @@
+.freeGamesContainer {
+  width: 100%;
+  max-width: 80%;
+  color: white;
+  text-align: center;
+  box-sizing: border-box; /* 确保内边距包含在总宽度内 */
+  margin: 0 auto; /* 居中容器 */
+  padding: 20px; 
+  padding-bottom: 80px;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* 添加底部间距 */
+}
+
+.navigationButtons {
+  display: none; /* 默认隐藏导航按钮 */
+}
+
+.navigationButtons button {
+  background-color: #1e1e1e;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.navigationButtons button:disabled {
+  color: #555;
+  cursor: not-allowed;
+}
+
+.productsGrid {
+  display: flex;
+  gap: 20px;
+  overflow: hidden; /* 确保多余的内容被隐藏 */
+  height: 100%;
+  width: 100%; 
+}
+
+.productCard { 
+  height: 300px;
+  padding: 0px; /* 移除内边距 */
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  flex: 0 0 200px; /* 确保每个产品卡片的宽度一致 */
+  margin-bottom: 30px;
+}
+
+.productCard:hover {
+  transform: scale(1.05);
+}
+
+.productImage {
+  width: 100%;
+  height: 65%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.productInfo {
+  height: 35%;
+  margin-top: 10px;
+}
+
+.productCategory {
+  font-size: 12px;
+  color: #888;
+}
+
+.productName {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.priceSection {
+  display: flex;
+  align-items: center;
+  
+}
+
+.discountBadge {
+  background-color: #ff4c4c;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.productPrice {
+  font-weight: bold;
+  color: white;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: #888;
+  margin-left: 10px;
+}
+
+.freeBadge {
+  background-color: #1e90ff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* 响应式设计 */
+@media (min-width: 768px) {
+  .productsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 设置4列的网格布局 */
+  }
+
+  .navigationButtons {
+    display: flex; /* 大屏幕上显示导航按钮 */
+  }
+
+  .productCard {
+    flex: 1; /* 重置flex属性 */
+  }
+}
+
+@media (max-width: 768px) {
+  .productsGrid {
+    display: flex;
+    overflow-x: auto; /* 小屏幕上允许水平滚动 */
+    scroll-snap-type: x mandatory; /* 启用滚动捕捉 */
+  }
+
+  .productCard {
+    width: 50%;
+    flex: 0 0 auto; /* 确保卡片不会伸展 */
+    scroll-snap-align: start; /* 启用滚动捕捉对齐 */
+  }
+
+  .productImage {
+    width: 100%;
+    max-width: 100%; /* 确保图片不会超出容器宽度 */
+    max-height: 300px; /* 设置图片的最大高度 */
+  }
+
+  .navigationButtons {
+    display: flex; /* 小屏幕上显示导航按钮 */
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .freeGamesContainer {
+    max-width: 96%;
+  }
+}

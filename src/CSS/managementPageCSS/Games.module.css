@@ -1,0 +1,168 @@
+.gamesContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.TopButton {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.TopButton button {
+  height: 60%;
+  margin: 10px;
+}
+
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.filterContainer label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  min-width: 150px;
+}
+
+.gamesContainer button {
+  align-items: center;
+  text-align: center;
+}
+
+.tableContainer {
+  overflow-x: auto; /* 添加水平滚动条 */
+  width: 130%;
+}
+
+.gamesTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.gamesTable th, .gamesTable td {
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.gamesTable th {
+  background-color: #f2f2f2;
+}
+
+.gameImage {
+  width: 100px; /* 调整图片宽度 */
+  height: auto;
+  margin: 2px; /* 添加间距 */
+  object-fit: cover;
+}
+
+.imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.descriptionContainer {
+  max-width: 3000px;
+  max-height: 200px;
+  overflow-y: auto; /* 添加垂直滚动条 */
+}
+
+.categoriesContainer, .tagsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoriesContainer span, .tagsContainer span {
+  display: block;
+  white-space: pre-wrap;
+}
+
+.requirementsContainer {
+  max-height: 200px;
+   /* 限制最大高度 */
+  overflow-y: auto; /* 添加垂直滚动条 */
+  white-space: pre-wrap; /* 保持换行 */
+}
+
+.editButton, .deleteButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.editButton:hover, .deleteButton:hover {
+  background-color: #0056b3;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pageButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pageButton:hover {
+  background-color: #0056b3;
+}
+
+.filterContainer input,
+.filterContainer select {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.filterContainer button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filterContainer button:hover {
+  background-color: #0056b3;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .filterContainer {
+    flex-direction: column; 
+    align-items: stretch;
+  }
+
+  .TopButton {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
