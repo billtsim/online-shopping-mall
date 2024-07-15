@@ -1,12 +1,12 @@
-name: Deploy to Firebase Hosting on merge
+name: Deploy to Firebase Hosting on PR
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
 jobs:
-  build_and_deploy:
+  build_and_deploy_preview:
     runs-on: ubuntu-latest
 
     steps:
@@ -30,3 +30,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JAVAPROJECT_423312 }}'
           projectId: javaproject-423312
+          channelId: 'pr-preview' # 添加 channelId 参数
