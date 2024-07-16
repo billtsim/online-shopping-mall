@@ -21,6 +21,7 @@ export default defineConfig({
   },
   server: {
     host: true, // Allow access via IP address
+    historyApiFallback: true // Add this line to handle SPA routing
   },
   build: {
     outDir: 'dist', // Ensure the build output directory is set to 'dist'

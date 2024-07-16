@@ -72,7 +72,6 @@ const Dashboard = () => {
             <input type="text" placeholder="搜尋人員、文件和更多" />
           </div>
           <div className={styles.userInfo} onClick={toggleDropdown}>
-            <img src="/path/to/user-avatar.jpg" alt="User Avatar" className={styles.avatar} />
             <span>Elliotboy</span>
             <div className={`${styles.dropdownMenu} ${dropdownOpen ? styles.active : ''}`}>
               <Link to="#" onClick={() => setSelectedComponent('profile')}>個人資料</Link>
